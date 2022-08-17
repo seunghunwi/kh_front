@@ -1,0 +1,72 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #000a12;
+    --accent-color: rgba(145, 151, 146, 0.966);
+}
+body {margin: 0;}
+ a {text-decoration: none;color: var(--text-color);}
+ .navbar {display: flex; align-items:stretch; justify-content:space-between; padding: 8px 12px;
+          font-family: 'Source Sans Pro', sans-serif;}
+.navbar__logo {font-size: 24px;color: var(--text-color);}
+.navbar__logo div {width: 100%;}
+.navbar__menu {display:flex;list-style: none; }
+.navbar__menu li {padding: 15px 80px; }
+.navbar__menu li:hover {font-size: 18px;border-radius: 4px;}
+.navbar__sns {list-style: none;display: flex;padding-left: 0;}
+.navbar__sns li {padding: 8px 12px; margin-right: 0px; flex-grow: 1;}
+.navbar__toggleBtn {display: none; position: absolute; right: 32px; font-size: 24px; color: var(--accent-color);}
+@media screen and (max-width: 900px) {
+.navbar {flex-direction: column;align-items: flex-start;padding:  8px 12px;}
+    .navbar__menu {display: none;flex-direction: column;align-items: center;width: 100%;}
+    .navbar__menu li {width: 100%;text-align: center;}
+    .navbar__sns {display: none;justify-content: center;width: 100%;}
+    .navbar__toggleBtn {display: block;}
+    .navbar__menu.active,.navbar__sns.active { display: flex;}
+}
+#st {
+    animation-name: maap,maaap;
+  animation-duration:1.5s;
+  animation-duration: leaner;
+  animation-iteration-count:1;
+  animation-direction:alternate;
+  animation-fill-mode: forwards;
+  }
+@keyframes maap {
+  0% {
+    left:-250px;
+  }
+  100% {
+    left:0px;
+  }
+}
+@keyframes maaap {
+    0% {
+      opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
+  #center {
+    border: 1px solid black;
+    width: 328px;
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+   background:gray;
+   margin-top: 10px;
+  }
+  #left b{
+    color: black;
+  }
+  #btn {
+    box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #06090f; 
+    cursor: pointer;
+    margin-left: 220px;
+  }

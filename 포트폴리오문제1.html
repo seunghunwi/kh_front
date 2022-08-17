@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCSTest</title>
+  <style>
+    #info{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+}
+#info_container {
+  border: 1px solid black;
+  width: 40%;
+  height: 600px;
+  position: relative;
+  padding: 20px;
+  background-color: #e9ecef;
+}
+#form_info {
+  height: 500px;
+  margin: 20px;
+}
+.form_info_container {
+  height: 20%;
+}
+.label_container {
+  float: left;
+  height: 100%;
+  width: 30%;
+  font-size:24px;
+  text-align: center;
+}
+.input_container {
+  height: 100%;
+}
+.input_container > input {
+  border-style:none;
+  border-bottom: dashed;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:20px;
+  width: 68%;
+}
+.input_container > label {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: gray;
+  font-size: 14px;
+}
+#join_btn {
+  background-color: #A6FFA6;
+  border: 1px solid #A6FFA6;
+  color: green;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#userIdWarn{
+  visibility: hidden
+}
+#userPwWarn{
+  visibility: hidden
+}
+#userPwCheckWarnWarn{
+  visibility: hidden
+}
+#userPwRegExp{
+  visibility: hidden
+}
+
+  </style>
+</head>
+<body>
+  <div id="info">
+    <div id="info_container">
+      <form action="">
+        <div id="form_info">
+          <div id="userId_container" class="form_info_container">
+            <div class="label_container">
+              <label for="userId">아이디</label>
+            </div>
+            <div class="input_container">
+              <input type="text" id="userId">
+              <label for="userIdWarn" id="userIdWarn">필수 입력 항목 입니다.</label>
+            </div>
+          </div>
+          <div id="userPw_container" class="form_info_container">
+            <div class="label_container">
+              <label for="userPw">패스워드</label>
+            </div>
+            <div class="input_container">
+              <input type="password" id="userPw_input" class="userPw">
+              <label for="userPwWarn" id="userPwWarn">필수 입력 항목 입니다.</label><br>
+              <label for="userPwWarn" id="userPwRegExp">영문자 대/소문자 특수문자, 숫자 포함 8~32자</label>
+            </div>
+          </div>
+          <div id="userPwCheck_container" class="form_info_container">
+            <div class="label_container">
+              <label for="userPwCheck">패스워드 확인</label>
+            </div>
+            <div class="input_container">
+              <input type="password" id="userPwCheckWarn" class="userPw">
+              <label for="userPwCheckWarn" id="userPwCheckWarnWarn">필수 입력 항목 입니다.</label>
+            </div>
+          </div>
+          <div id="userEmail_container" class="form_info_container">
+            <div class="label_container">
+              <label for="userEmail">이메일</label>
+            </div>
+            <div class="input_container">
+              <input type="email" id="userEmail">
+            </div>
+          </div>
+          <div id="userAddress_container" class="form_info_container">
+            <div class="label_container">
+              <label for="userAddress">주소</label>
+            </div>
+            <div class="input_container">
+              <input type="text" id="userAddress">
+            </div>
+          </div>
+        <div id="form_btn">
+          <button type="submit" id="join_btn">가입</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
